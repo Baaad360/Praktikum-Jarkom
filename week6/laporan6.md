@@ -9,8 +9,7 @@ NIM     : 103072400033
 Memahami atau mengetahui cara kerja protokol TCP menggunakan Wireshark
 
 ## Percobaan Praktikum & Lampiran
-6.2
-
+## 6.2
 Langkah langkah
 1. Siapkan Wireshark lalu salin link yang ada di modul 6 bagian 6.2
 2. Jika sudah mulai capture di Wireshark dan buka link di website
@@ -21,6 +20,8 @@ Langkah langkah
 ![Lampiran Week 6](../assets/image/week6/2.png)
 6. Setelah berhasil akan memunculkan seperti gambar di bawah untuk bagian Wiresharknya
 ![Lampiran Week 6](../assets/image/week6/3.png)
+
+<br>
 
 ## 6.3
 Langkah langkah
@@ -37,6 +38,8 @@ Alamat IP Server: 128.119.245.12 Nomor Port TCP Server: 80
 Analisis:
 - Alamat IP: Terlihat pada kolom "Destination" di paket nomor 1 (atau kolom "Source" pada paket balasan nomor 2).
 - Nomor Port: Port 80 adalah port standar untuk layanan HTTP. Server menerima permintaan pada port 80 dan mengirimkan balasan (segmen SYN, ACK pada paket nomor 2) juga menggunakan port 80 sebagai sumbernya
+
+<br>
 
 ## 6.4
 1. Segmen TCP pertama (nomor paket 1) memiliki relative sequence number 0. Segmen ini diidentifikasi sebagai segmen SYN karena bagian TCP Flags terdapat tanda 'Syn: Set' (nilai flag 0x002). Penggunaan flag SYN ini langkah pertama dari TCP Three-Way Handshake untuk meminta sinkronisasi koneksi dengan server gaia.cs.umass.edu
@@ -56,6 +59,9 @@ Analisis:
 7. Tidak ada tcp retransmisi
 ![Lampiran Week 6](../assets/image/week6/14.png)
 8. Sesuai perjanjian dikelas no 8 dan 9 tidak dikerjakan
+
+<br>
+
 ## 6.5
 jawab
 1. Slow start itu dia itu ngirim ada lonjakan tertentu setiap waktu dibagian bawah, congestion avoidant dibagian paling atas. Bayangkan koneksi TCP seperti seorang pengemudi yang sedang mencari kecepatan paling pas di jalan raya. Pada fase Slow Start, pengemudi langsung "langsung gas" dengan meningkatkan kecepatan pengiriman data secara cepat untuk melihat kapasitas maksimal jalan. Merasa jalanan mulai padat atau mencapai batas tertentu (ssthresh), TCP berpindah ke fase Congestion Avoidance, di mana pengemudi mulai lebih berhati-hati dengan menambah kecepatan secara pelan dan stabil agar tidak terjadi kemacetan. Pola grafik "gergaji" yang dilihat adalah mekanisme pertahanan TCP: saat pengemudi mendeteksi kemacetan (RTT naik tajam karena antrean penuh), ia akan langsung "ngerem mendadak" atau mengurangi kecepatan secara drastis untuk menghindari tabrakan (packet loss), sebelum akhirnya perlahan mencoba menambah kecepatan kembali
